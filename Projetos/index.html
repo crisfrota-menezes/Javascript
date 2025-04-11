@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tigrinho do advinha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section>
+      <header id="header">
+        <h1>Bem-vindo ao Tigrinho da advinhação!</h1>
+      </header>
+      <main>
+        <div id="welcome">
+          <p>
+            Este é um jogo de adivinhação onde você pode testar suas
+            habilidades.
+          </p>
+          <button id="start" onclick="startGame()">Iniciar Jogo</button>
+        </div>
+        <div id="game" style="display: none">
+          <h2>Palpite um valor de 1 a 100</h2>
+          <input type="number" id="guess" min="1" max="100" />
+          <button onclick="checkGuess()">Enviar Palpite</button>
+          <p id="result"></p>
+          <button
+            id="playAgain"
+            style="display: none; margin-left: 70px"
+            onclick="playAgain()"
+          >
+            Jogar Novamente
+          </button>
+        </div>
+      </main>
+    </section>
+    <footer>
+      <p>&copy; 2023 Tigrinho do advinha. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
