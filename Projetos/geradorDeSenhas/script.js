@@ -16,14 +16,14 @@ function genPassword(length) {
 }
 
 genButton.onclick = () => {
-  const length = 12; // Default length for the password
+  const length = 12;
   let result = genPassword(length);
   password.innerText = result;
   passwordContainer.style.display = "block";
 };
 
 copyButton.onclick = () => {
-  const generatedPassword = password.innerText; // Access the displayed password
+  const generatedPassword = password.innerText;
   navigator.clipboard
     .writeText(generatedPassword)
     .then(() => {
