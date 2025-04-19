@@ -1,0 +1,111 @@
+@charset 'UTF-8';
+
+/* Reset de CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.6rem;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do visor */
+
+.visor {
+  height: 65px;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  text-align: right;
+}
+
+.visor p {
+  font-size: 3rem;
+  color: #333;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+}
+
+/* Estilo do teclado */
+
+.teclado {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.teclado button {
+  width: 24%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.teclado button:hover {
+  background-color: darkgray;
+}
+
+.teclado button.operacao {
+  background-color: mediumseagreen;
+  color: white;
+  border: 1px solid seagreen;
+}
+
+.teclado button.operacao:hover {
+  background-color: seagreen;
+}
+
+.teclado button.igual {
+  background-color: royalblue;
+  color: white;
+  border: 1px solid cornflowerblue;
+}
+
+.teclado button.igual:hover {
+  background-color: cornflowerblue;
+}
+
+.teclado button.especial {
+  background-color: mediumpurple;
+  color: white;
+  border: 1px solid purple;
+}
+
+.teclado button.especial:hover {
+  background-color: purple;
+}
+
+.teclado button.numero {
+  border: 1px solid darkgray;
+}
