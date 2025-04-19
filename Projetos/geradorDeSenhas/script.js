@@ -22,14 +22,12 @@ genButton.onclick = () => {
   passwordContainer.style.display = "block";
 };
 
-copyButton.onclick = () => {
+copyButton.onclick = async () => {
   const generatedPassword = password.innerText;
-  navigator.clipboard
-    .writeText(generatedPassword)
-    .then(() => {
-      alert("Senha copiada para a área de transferência!");
-    })
-    .catch(() => {
-      alert("Falha ao copiar a senha.");
-    });
+  try {
+    await navigator.clipboard.writeText(generatedPassword);
+    alert("Senha copiada para a área de transferência!");
+  } catch (err) {
+    alert("Falha ao copiar a senha.");
+  }
 };
